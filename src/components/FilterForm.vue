@@ -1,8 +1,3 @@
-<script setup>
-
-    
-</script>
-
 <template>
     <form class="form-wrapper" action="" @submit.prevent="submitForm" :data-entity="entity">
         <div class="form__field-wrapper" v-for="(field, index) in fields">
@@ -11,7 +6,7 @@
                     {{ field.desc }}
                 </div>
                 <select :name="field.name">
-                    <option>Не выбрано</option>
+                    <option value="">Не выбрано</option>
                     <option v-for="option in field.options" :value="option.name" :selected="field.value == option.name ? true : false">
                         {{ option.value }}
                     </option>
@@ -55,8 +50,6 @@ export default {
     async created () {
         this.fields = await this.fieldsPromise;
     },
-
-
 }
 </script>
 <style>

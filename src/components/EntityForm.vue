@@ -59,6 +59,9 @@
                     {{ field.desc }}
                 </div>
                 <select :name="field.name">
+                    <option>
+                        Не выбрано
+                    </option>
                     <option v-for="option in field.options" :value="option.name" :selected="field.value == option.name ? true : false">
                         {{ option.value }}
                     </option>

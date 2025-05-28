@@ -17,7 +17,9 @@
     function submitForm (e) {
         e.preventDefault();
 
-        api.rest('filter/result.json').then((data) => {
+        const form_elem = e.target;
+
+        api.rest('filter/result.json', 'GET', [], form_elem).then((data) => {
             rows.value = data;
         });
     }   
