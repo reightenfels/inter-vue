@@ -1,13 +1,18 @@
 <script setup>
     import EntityForm from '@/components/EntityForm.vue';
     import Api from '@/api/api';
+    import { ref } from 'vue';
 
     const api = new Api();
-    const fieldsPromise = api.rest('sports/fields-create.json');
+
+    const fields = ref([]);
+    api.rest('sports/fields-create.json').then((data) => {
+        fields.value = data;
+    });
 </script>
 
 <template>
-    <EntityForm :fieldsPromise="fieldsPromise" action="create" entity="sports" />
+    <EntityForm :fields="fields" action="create" entity="sports" />
 </template>
 
 <script>

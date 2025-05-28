@@ -80,8 +80,8 @@
 <script>
 export default {
     props: {
-        fieldsPromise: {
-            type: Promise,
+        fields: {
+            type: Array,
             required: true
         },
 
@@ -94,16 +94,6 @@ export default {
             type: String,
             required: true
         },
-    },
-
-    data() {
-        return {
-            fields: []
-        };
-    },
-
-    async created () {
-        this.fields = await this.fieldsPromise;
     }
 }
 </script>

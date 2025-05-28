@@ -7,7 +7,11 @@
     const heading = ['Фото', 'ФИО', 'Вид спорта', 'Биография', 'Год начала карьеры'];
 
     const api = new Api();
-    const fieldsPromise = api.rest('filter/fields.json');
+
+    const fields = ref([]);
+    api.rest('filter/fields.json').then((data) => {
+        fields.value = data;
+    });
 
     const rows = ref([]);
     api.rest('athletest-list/list.json').then((data) => {
@@ -27,7 +31,7 @@
 
 <template>
     <h1>Фильтр</h1>
-    <FilterForm :fieldsPromise="fieldsPromise" entity="athletest" :submitForm="submitForm" />
+    <FilterForm :fields="fields" entity="athletest" :submitForm="submitForm" />
     <Table :headingRow="heading" :rows="rows" entity="athletest" />
 </template>
 <script>

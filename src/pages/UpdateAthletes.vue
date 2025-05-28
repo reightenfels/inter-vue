@@ -1,13 +1,18 @@
 <script setup>
     import EntityForm from '@/components/EntityForm.vue';
     import Api from '@/api/api';
+    import { ref } from 'vue';
 
     const api = new Api();
-    const fieldsPromise = api.rest('athletest-list/fields.json');
+
+    const fields = ref([]);
+    api.rest('athletest-list/fields.json').then((data) => {
+        fields.value = data;
+    });
 </script>
 
 <template>
-    <EntityForm :fieldsPromise="fieldsPromise" action="update" entity="athletest" />
+    <EntityForm :fields="fields" action="update" entity="athletest" />
 </template>
 
 <script>
