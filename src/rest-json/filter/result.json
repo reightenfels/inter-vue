@@ -1,0 +1,19 @@
+{
+    "10":
+    {
+        "image_url": "https://example.jpeg",
+        "fio": "Спортсмен 1",
+        "sport": "Футбол",
+        "biography": "Биография",
+        "year_of_start_career": "2020"
+    },
+
+    "12":
+    {
+        "image_url": "https://example.jpeg",
+        "fio": "Спортсмен 3",
+        "sport": "Хоккей",
+        "biography": "Биография",
+        "year_of_start_career": "2022"
+    }
+}

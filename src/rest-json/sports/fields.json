@@ -1,0 +1,15 @@
+[
+    {
+        "type": "text",
+        "value": "1",
+        "name": "id",
+        "desc": "ID"
+    },
+
+    {
+        "type": "text",
+        "value": "Футбол",
+        "name": "name",
+        "desc": "Название"
+    }
+]

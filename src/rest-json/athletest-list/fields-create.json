@@ -1,0 +1,54 @@
+[
+    {
+        "type": "image",
+        "value": "",
+        "name": "image_url",
+        "desc": "Изображение"
+    },
+    {
+        "type": "text",
+        "value": "",
+        "name": "fio",
+        "desc": "ФИО"
+    },
+    {
+        "type": "select",
+        "value": "",
+        "name": "sports",
+        "desc": "Виды спорта",
+        "options": [
+            {
+                "name": "footbal",
+                "value": "Футбол"
+            },
+            {
+                "name": "basketbal",
+                "value": "Баскетбол"
+            },
+            {
+                "name": "hockey",
+                "value": "Хоккей"
+            },
+            {
+                "name": "tennis",
+                "value": "Теннис"
+            },
+            {
+                "name": "golf",
+                "value": "Гольф"
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "value": "",
+        "name": "biography",
+        "desc": "Биография"
+    },
+    {
+        "type": "text",
+        "value": "",
+        "name": "year_of_start",
+        "desc": "Год начала карьеры"
+    }
+]
